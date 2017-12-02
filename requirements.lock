@@ -29,3 +29,4 @@ Tempita==0.5.2
 Werkzeug==0.12.2
 Whoosh==2.7.4
 WTForms==2.1
+requests==2.18.4
