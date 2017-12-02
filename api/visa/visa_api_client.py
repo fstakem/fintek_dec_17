@@ -21,7 +21,7 @@ import calendar
 class VisaAPIClient:
     
     config = parser.ConfigParser()
-    config_path = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)),'configuration.ini'))
+    config_path = '/home/fstakem/projects/fintek_dec_17/api/visa/configuration.ini'
     config.read(config_path)
     
     logging.getLogger('').addHandler(logging.StreamHandler())
@@ -57,6 +57,10 @@ class VisaAPIClient:
             self.log.info(json.dumps(json.loads(response.text), indent=4, sort_keys=True))
         
     def do_mutual_auth_request(self, path, body, test_info, method_type, input_headers={}):
+        ## HACK AS IT IS NOT READING MY CONFIG
+        #print(VisaAPIClient.config_path)
+        #self.config.read()
+
         user_name = self.config.get('VDP','userId')
         password= self.config.get('VDP','password')
         cert = self.config.get('VDP','cert')
