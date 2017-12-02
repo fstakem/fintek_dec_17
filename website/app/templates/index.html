@@ -1,0 +1,109 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="/static/css/landing_page.css">
+
+<!-- Header -->
+<header class="intro-header">
+    <div class="container-fluid">
+        <div class="intro-message">
+            <h1>Payment Platform</h1>
+            <h3><i>The</i> place for small businesses</h3>
+            <hr class="intro-divider">
+            <!-- TODO: Check this ul below -->
+            <ul class="list-inline intro-social-buttons">
+                {% if g.user.id %}
+                <li class="list-inline-item">
+                    <a href="{{ url_for('create_payment') }}" class="btn btn-secondary btn-lg">
+                        <i class="fa fa-pencil-square-o fa-fw"></i>
+                        <span class="network-name">Make a payment</span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="list-inline-item">
+                    <a href="{{ url_for('register_user') }}" class="btn btn-secondary btn-lg">
+                        <i class="fa fa-id-card-o fa-fw"></i>
+                        <span class="network-name">Register now for a free account</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</header>
+
+
+<!-- Page Content -->
+<section class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 ml-auto">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                {% if g.user.id %}
+                    <h2 class="section-heading">Micropayments:<br> get in the know</h2>
+                    <p class="lead">
+                        Learn more about micropayments for tiny businesses 
+                        <a target="_blank" href="#">here</a>.
+                    </p>
+                {% else %}
+                    <h2 class="section-heading">Micropayments:<br>We got 'em</h2>
+                    <p class="lead">
+                        Login to learn more
+                    </p>
+                {% endif %}
+            </div>
+            <div class="col-lg-5 mr-auto">
+                <img class="img-fluid" src="/static/img/jonas-leupe-426231_unsplash_small.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<aside class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 my-auto">
+                <h2>Connect with the Fred Stakem and Thomas Backes team.</h2>
+            </div>
+            <div class="col-lg-6 my-auto">
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#" class="btn btn-secondary btn-lg">
+                            <i class="fa fa-facebook fa-fw"></i>
+                            <span class="network-name">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="btn btn-secondary btn-lg">
+                            <i class="fa fa-twitter fa-fw"></i>
+                            <span class="network-name">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="btn btn-secondary btn-lg">
+                            <i class="fa fa-linkedin fa-fw"></i>
+                            <span class="network-name">Linkedin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</aside>
+
+
+<script language="JavaScript">
+<!--
+    function MM_openBrWindow(theURL,winName,features) { //v2.0
+        window.open(theURL,winName,features);
+    }
+//-->
+</script>
+
+{% endblock %}

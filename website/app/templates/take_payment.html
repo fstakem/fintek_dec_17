@@ -1,0 +1,23 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+
+<div class="container">
+
+    <div class="well well-large" style="height: 60px;">
+        <div class="pull-right">
+        </div>
+        <h2>User {{ user.username }}'s Payments</h2>
+        <!-- {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %} -->
+        {% if user.last_seen %}
+        <!-- <p><em>{{ _('Last seen:') }} {{ momentjs(user.last_seen).calendar() }}</em></p> -->
+        {% endif %}
+        </p>
+    </div>
+
+</div>
+
+{% endblock %}
