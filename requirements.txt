@@ -1,0 +1,12 @@
+ipython
+ipdb
+
+numpy
+pandas
+matplotlib
+
+flask
+sqlalchemy
+alembic
+
+requests

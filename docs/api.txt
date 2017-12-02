@@ -1,0 +1,59 @@
+
+Visa Login
+--------------------------------------------------------------------------
+user: fstakem
+pw: Fintek17!!
+
+merchant id: me_fintek_6164
+
+export password: fred
+
+PEM phrase: fred
+
+(fintek_env) fstakem@fred-stakem-yoga:~/projects/fintek_dec_17/keys$ openssl req -new -keyout private_key.pem -out certreq.csr 
+Generating a 2048 bit RSA private key
+........................+++
+.........+++
+writing new private key to 'private_key.pem'
+Enter PEM pass phrase:
+Verifying - Enter PEM pass phrase:
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:GA
+Locality Name (eg, city) []:Atlanta
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:hackathon
+Organizational Unit Name (eg, section) []:hackathon
+Common Name (e.g. server FQDN or YOUR name) []:fred
+Email Address []:fstakem@gmail.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+
+pw: fred
+
+
+
+Email
+Account Admin
+An Account Admin account is the master Account for a specific Merchant ID.
+Click to configure your Account Admin username and password.
+Use the Organization ID and Contact Email below during the verification process.
+Organization ID: me_fintek_6164_acct
+Contact Email: fstakem@gmail.com
+
+Merchant Admin
+A Merchant Admin account is an account that enables the user to lookup transactions, perform Virtual Terminal transactions, and view reports, for a specific Merchant ID.
+Click to configure your Merchant Admin username and password.
+Use the Organization ID and Contact Email below during the verification process.
+Organization ID: me_fintek_6164
+Contact Email: fstakem@gmail.com
+
+Bookmark this link to access the Business Center:  https://ebctest.cybersource.com/ebctest
